@@ -1,0 +1,84 @@
+
+
+<h1>Welcome</h1>
+
+
+<div class="container">
+
+   <!-- 
+       <form >
+
+      
+        <div >
+            <label >User Input</label>
+           <input [value]="comment"  (input)="comment=$event.target.value "  >
+            {{comment}}
+        </div>
+        <br>
+    -->
+
+<!--user input-->
+ <h1 class="display=1">Posts</h1>
+ <form #f="ngForm" class="container add-form form-group " (ngSubmit)="onSubmit(f)"novalidate>
+    <label >Add a new post</label>
+        <div>
+        <p>
+        <label > Title: </label>
+        <input class="form-control" name="title" ngModel required #first="ngModel" type="text" [(ngModel)]="titlename">{{titlename}}
+        </p>
+    </div>
+    
+    <br>
+ <!--   <div>
+        <p>
+        <label > Content:   </label>
+        <input class="form-control" name="content" ngModel required type="text" [(ngModel)]="contentname" >{{name}}</p>
+    
+    </div>
+
+  -->  
+    <br>
+    <button type="submit" class="button">Submit</button>
+
+
+
+<!--</form>-->
+
+        
+
+        <!--user inputlikes-->
+
+        
+        <div class="card-body">
+                <h5 class="card-title">Number of Likes</h5>
+                <p>{{numberOfLikes}}</p>
+                <button class="btn btn-success" (click)="likeButtonClick()">Like</button>
+                <button class="btn btn-danger" (click)="dislikeButtonClick()">Dislike</button>
+                
+            </div>
+         <br>
+         
+        
+    </form>
+</div>
+
+
+
+
+<!--
+<div class="container" 
+*ngFor="let post of Posts">
+<div class="col">
+    <post class="post"
+        title="{{post.title}}"
+        content="{{post.content}}">
+    </post>
+
+</div>
+</div>
+
+-->
+
+
+
+
